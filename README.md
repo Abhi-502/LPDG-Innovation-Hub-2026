@@ -7,7 +7,7 @@
 [![Pytest](https://img.shields.io/badge/tests-48%20passed-brightgreen.svg)](https://docs.pytest.org/)
 [![Schema Validated](https://img.shields.io/badge/predictions.csv-100%25%20compliant-success.svg)](file:///Users/macbook/Desktop/CHALLENGE/validate_submission.py)
 [![Watch on Google Drive](https://img.shields.io/badge/Google%20Drive-Watch%20Video%20(Stream)-4285F4.svg?logo=googledrive&logoColor=white)](https://drive.google.com/file/d/14AqDBsg9t_7pL3i-R2pIUSQls8GtRSAY/view?usp=sharing)
-[![Demo Video](https://img.shields.io/badge/Demo%20Video-6%3A27%20mins%20(HD%20MOV)-orange.svg)](demov.mov)
+[![Demo Video](https://img.shields.io/badge/Demo%20Video-6%3A43%20mins%20(720p%20HD)-orange.svg)](demo_video.mp4)
 [![Candidate Resume](https://img.shields.io/badge/23091A0502.pdf-blueviolet.svg)](23091A0502.pdf)
 
 ---
@@ -15,7 +15,7 @@
 ## 📹 Video Walkthrough & Candidate Submission Materials
 
 - 🌐 **Watch Online (Google Drive 1080p Stream)**: [**`Watch Walkthrough Video Online`**](https://drive.google.com/file/d/14AqDBsg9t_7pL3i-R2pIUSQls8GtRSAY/view?usp=sharing)
-- 🎬 **Repository Video File**: [**`demov.mov`** (Click to view / download)](demov.mov)
+- 🎬 **Repository Video File**: [**`demo_video.mp4`** (Click to view / download)](demo_video.mp4)
 - 📄 **Candidate Resume (SDE)**: [**`23091A0502.pdf`**](23091A0502.pdf)
 - 📝 **Full Presentation Script & Timing Guide**: [**`VIDEO_RECORDING_SCRIPT.md`**](VIDEO_RECORDING_SCRIPT.md)
 
