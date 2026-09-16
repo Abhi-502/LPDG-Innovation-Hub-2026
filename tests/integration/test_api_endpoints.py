@@ -77,3 +77,22 @@ def test_runs_endpoint_create_and_get(test_client: TestClient):
     get_res = test_client.get(f"/api/v1/runs/{run_id}")
     assert get_res.status_code == 200
     assert get_res.json()["run_id"] == run_id
+
+
+def test_direct_gateway_and_predictions_endpoints(test_client: TestClient):
+    # Test /api/v1/predictions default latest week
+    res = test_client.get("/api/v1/predictions")
+    assert res.status_code == 200
+    assert len(res.json()["predictions"]) == 15
+
+    # Test /api/v1/gateways/{id} direct explanation endpoint
+    top_gw = res.json()["predictions"][0]["gateway_id"]
+    gw_res = test_client.get(f"/api/v1/gateways/{top_gw}")
+    assert gw_res.status_code == 200
+    assert gw_res.json()["gateway_id"] == top_gw
+    assert gw_res.json()["status"] == "RANKED_TOP_15"
+
+    # Test alias /explanation
+    expl_res = test_client.get(f"/api/v1/gateways/{top_gw}/explanation")
+    assert expl_res.status_code == 200
+    assert expl_res.json()["gateway_id"] == top_gw
