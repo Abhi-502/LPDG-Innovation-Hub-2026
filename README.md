@@ -214,7 +214,6 @@ For full request/response schemas and curl examples, see [docs/API.md](docs/API.
 
 - **[PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**: Complete system design, operational ROI, and architectural blueprint.
 - **[PROCESS_AND_TERMINOLOGY_GUIDE.md](PROCESS_AND_TERMINOLOGY_GUIDE.md)**: Exhaustive domain glossary, formulas, and stage-by-stage execution map.
-- **[VIDEO_RECORDING_SCRIPT.md](VIDEO_RECORDING_SCRIPT.md)**: 6 to 8-minute presentation script, timing breakdown, and speaking guide.
 - **[DECISIONS.md](DECISIONS.md)**: 5 defended architectural choices, Part 2 track defense, and two-week roadmap.
 - **[AI-USAGE.md](AI-USAGE.md)**: AI usage disclosure & log of 5 concrete corrected errors.
 - **[docs/API.md](docs/API.md)**: Full REST API specification with cURL examples.
