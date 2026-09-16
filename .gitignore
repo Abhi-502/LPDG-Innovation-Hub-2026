@@ -13,6 +13,8 @@ field_visits.csv
 engineer_review_2026-02.xlsx
 telemetry_sample_2025-08.csv
 *.zip
+*.mov
+!walkthrough_demo.mp4
 
 # Allow submission output predictions
 !predictions.csv

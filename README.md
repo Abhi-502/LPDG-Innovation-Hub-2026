@@ -6,6 +6,16 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com)
 [![Pytest](https://img.shields.io/badge/tests-48%20passed-brightgreen.svg)](https://docs.pytest.org/)
 [![Schema Validated](https://img.shields.io/badge/predictions.csv-100%25%20compliant-success.svg)](file:///Users/macbook/Desktop/CHALLENGE/validate_submission.py)
+[![Walkthrough Video](https://img.shields.io/badge/Walkthrough%20Video-8%20mins%20(1080p%2F720p)-orange.svg)](walkthrough_demo.mp4)
+
+---
+
+## 📹 Video Walkthrough & Technical Demonstration
+
+An 8-minute end-to-end technical demonstration covering the problem formulation, mathematical scoring engine, pipeline execution, Docker deployment, and live API endpoints:
+
+- 🎬 **Direct Video File**: [**`walkthrough_demo.mp4`** (Click to view / download)](walkthrough_demo.mp4)
+- 📝 **Full Presentation Script & Timing Guide**: [**`VIDEO_RECORDING_SCRIPT.md`**](VIDEO_RECORDING_SCRIPT.md)
 
 ---
 
