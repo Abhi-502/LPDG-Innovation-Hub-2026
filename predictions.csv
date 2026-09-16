@@ -1,0 +1,121 @@
+week_start,rank,gateway_id,score,reason
+2026-02-02,1,0ED1E9DBD593,48.9276,High priority (Rank 1): 47 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 79% across 282 expected meters. [Degraded coverage: 9/21 ref days].
+2026-02-02,2,0A2778A31BE3,47.1252,High priority (Rank 2): 28 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 48% across 140 expected meters.
+2026-02-02,3,02314F9A9168,46.2058,High priority (Rank 3): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 25% across 194 expected meters. [Degraded coverage: 7/21 ref days].
+2026-02-02,4,0A182EFD3C61,41.4656,High priority (Rank 4): 41 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 85% across 124 expected meters.
+2026-02-02,5,029A2B32D17E,40.622,High priority (Rank 5): 37 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 90% across 194 expected meters.
+2026-02-02,6,064AED1EC0AA,38.3373,High priority (Rank 6): 15 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 51% across 195 expected meters. [Degraded coverage: 20/21 ref days].
+2026-02-02,7,02097AB58D3C,38.3034,High priority (Rank 7): 13 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 66% across 315 expected meters.
+2026-02-02,8,060C5773A61B,36.5459,High priority (Rank 8): 29 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 84% across 116 expected meters.
+2026-02-02,9,0A96EACD8070,36.5213,High priority (Rank 9): 38 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 89% across 208 expected meters.
+2026-02-02,10,0ED5057ECE3F,35.9947,High priority (Rank 10): 24 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 90% across 357 expected meters.
+2026-02-02,11,0E31C429C185,35.7277,Medium priority (Rank 11): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 85% across 87 expected meters.
+2026-02-02,12,0AB97B7632EB,35.507,Medium priority (Rank 12): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 89% across 245 expected meters.
+2026-02-02,13,0ED4052A2763,35.4706,Medium priority (Rank 13): 3 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 91% across 273 expected meters.
+2026-02-02,14,0EA22CFA3A24,35.1826,Medium priority (Rank 14): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 87% across 141 expected meters.
+2026-02-02,15,0E50A5B2E5C4,35.1146,Medium priority (Rank 15): 5 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 97% across 344 expected meters.
+2026-02-09,1,06FFEC2EFA5E,63.8488,High priority (Rank 1): 68 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 62% across 249 expected meters. [Degraded coverage: 16/21 ref days].
+2026-02-09,2,06132D7396F8,50.8726,High priority (Rank 2): 56 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 92% across 96 expected meters. [Degraded coverage: 21/21 ref days].
+2026-02-09,3,02314F9A9168,50.1215,High priority (Rank 3): 36 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 25% across 194 expected meters. [Degraded coverage: 11/21 ref days].
+2026-02-09,4,06C77FEA9550,42.7334,High priority (Rank 4): 44 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 94% across 54 expected meters.
+2026-02-09,5,02097AB58D3C,40.1274,High priority (Rank 5): 24 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 66% across 315 expected meters.
+2026-02-09,6,0ED5057ECE3F,39.1235,High priority (Rank 6): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 90% across 357 expected meters.
+2026-02-09,7,0A182EFD3C61,38.4251,High priority (Rank 7): 30 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 85% across 124 expected meters.
+2026-02-09,8,0E6D2CBAED41,37.5619,High priority (Rank 8): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 86% across 146 expected meters. [Degraded coverage: 12/21 ref days].
+2026-02-09,9,023ADDDECF84,37.1732,High priority (Rank 9): 31 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 92% across 60 expected meters. [Degraded coverage: 14/21 ref days].
+2026-02-09,10,0A68F38A6ACF,37.0946,High priority (Rank 10): 30 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 83% across 78 expected meters. [Degraded coverage: 21/21 ref days].
+2026-02-09,11,029A2B32D17E,37.0014,High priority (Rank 11): 34 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 90% across 194 expected meters.
+2026-02-09,12,0228A99EE35A,36.8785,High priority (Rank 12): 21 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 89% across 121 expected meters.
+2026-02-09,13,0A96EACD8070,36.5767,High priority (Rank 13): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 89% across 208 expected meters.
+2026-02-09,14,0A1FB1C98A92,36.5393,High priority (Rank 14): 22 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 82% across 131 expected meters.
+2026-02-09,15,028764AA026E,36.289,Medium priority (Rank 15): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 85% across 119 expected meters.
+2026-02-16,1,0AE6BF39C720,46.6692,High priority (Rank 1): 50 abnormal disconnections hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 84% across 77 expected meters.
+2026-02-16,2,0ED1E9DBD593,44.9639,High priority (Rank 2): 38 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 79% across 282 expected meters. [Degraded coverage: 10/21 ref days].
+2026-02-16,3,06F170E6BB03,41.8875,High priority (Rank 3): 40 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 95% across 168 expected meters. [Degraded coverage: 11/21 ref days].
+2026-02-16,4,060EE3CB4779,40.9236,High priority (Rank 4): 39 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 88% across 69 expected meters.
+2026-02-16,5,0A96EACD8070,40.1949,High priority (Rank 5): 36 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 89% across 208 expected meters.
+2026-02-16,6,06238EE3BE6C,39.2381,High priority (Rank 6): 34 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 96% across 228 expected meters.
+2026-02-16,7,0A4673793B3E,37.6462,High priority (Rank 7): 27 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 95% across 549 expected meters.
+2026-02-16,8,060C5773A61B,37.2526,High priority (Rank 8): 28 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 84% across 116 expected meters.
+2026-02-16,9,062CA8BB55FC,36.7445,High priority (Rank 9): 10 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 91% across 195 expected meters.
+2026-02-16,10,0A5E96449374,36.4349,High priority (Rank 10): 29 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 89% across 65 expected meters. [Degraded coverage: 9/21 ref days].
+2026-02-16,11,0A42B2DB6370,35.6598,Medium priority (Rank 11): 4 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 93% across 114 expected meters.
+2026-02-16,12,0A55DA266F71,35.6345,High priority (Rank 12): 15 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 65% across 120 expected meters.
+2026-02-16,13,06C98DF4F0FA,35.4624,Medium priority (Rank 13): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 90% across 263 expected meters.
+2026-02-16,14,0ED5057ECE3F,34.7859,High priority (Rank 14): 28 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 90% across 357 expected meters.
+2026-02-16,15,06FFEC2EFA5E,34.7482,Medium priority (Rank 15): 6 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 62% across 249 expected meters. [Degraded coverage: 13/21 ref days].
+2026-02-23,1,06C77FEA9550,43.5826,High priority (Rank 1): 47 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 94% across 54 expected meters.
+2026-02-23,2,060EE3CB4779,42.2483,High priority (Rank 2): 46 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 88% across 69 expected meters.
+2026-02-23,3,0E69C64B6E57,40.9853,High priority (Rank 3): 37 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 97% across 184 expected meters.
+2026-02-23,4,060C5773A61B,40.362,High priority (Rank 4): 44 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 84% across 116 expected meters.
+2026-02-23,5,0E03D8F69853,38.7411,High priority (Rank 5): 31 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 88% across 69 expected meters.
+2026-02-23,6,0E1D7CA1DB0C,37.6125,High priority (Rank 6): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 97% across 525 expected meters.
+2026-02-23,7,024DD3A9ADCA,37.5261,High priority (Rank 7): 16 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 61% across 187 expected meters. [Degraded coverage: 13/21 ref days].
+2026-02-23,8,06B641B75B29,36.8474,High priority (Rank 8): 29 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 87% across 442 expected meters. [Degraded coverage: 9/21 ref days].
+2026-02-23,9,0E5DFCF65AD4,36.8066,Medium priority (Rank 9): 4 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 38% across 154 expected meters.
+2026-02-23,10,0EB6B31D8AFB,36.3399,Medium priority (Rank 10): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 87% across 196 expected meters.
+2026-02-23,11,02388A18854F,36.181,High priority (Rank 11): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 97% across 93 expected meters.
+2026-02-23,12,028764AA026E,36.0361,Medium priority (Rank 12): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 85% across 119 expected meters.
+2026-02-23,13,0E1C622E61BC,35.7093,Medium priority (Rank 13): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 87% across 94 expected meters.
+2026-02-23,14,02251388D3A2,35.5088,Medium priority (Rank 14): 3 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads at 90% across 92 expected meters.
+2026-02-23,15,0EC8A35D0C20,35.3409,Medium priority (Rank 15): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Meter reads fell to 89% across 151 expected meters.
+2026-03-02,1,060EE3CB4779,98.6667,High priority (Rank 1): 113 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 69 installed meters. [Degraded coverage: 20/21 ref days].
+2026-03-02,2,06C77FEA9550,92.0739,High priority (Rank 2): 103 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 54 installed meters.
+2026-03-02,3,0A8407CF4D85,52.6898,High priority (Rank 3): 37 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 236 installed meters.
+2026-03-02,4,06FFEC2EFA5E,51.543,High priority (Rank 4): 37 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 249 installed meters.
+2026-03-02,5,0EEA98D1BFDB,50.0256,High priority (Rank 5): 31 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 587 installed meters.
+2026-03-02,6,0239AD51B7AF,46.9258,High priority (Rank 6): 31 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 109 installed meters.
+2026-03-02,7,0E5303C82FCB,46.6826,High priority (Rank 7): 29 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 238 installed meters.
+2026-03-02,8,0A22622C2592,46.6809,High priority (Rank 8): 28 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 93 installed meters. [Degraded coverage: 9/21 ref days].
+2026-03-02,9,060C5773A61B,45.1014,High priority (Rank 9): 28 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 116 installed meters.
+2026-03-02,10,028A7DBC9820,45.101,High priority (Rank 10): 31 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 227 installed meters.
+2026-03-02,11,0A182EFD3C61,44.8418,High priority (Rank 11): 22 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 124 installed meters.
+2026-03-02,12,0AA9051FFFFA,44.5814,High priority (Rank 12): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 156 installed meters.
+2026-03-02,13,028764AA026E,44.5683,High priority (Rank 13): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 119 installed meters.
+2026-03-02,14,0E121B6B8661,44.2266,High priority (Rank 14): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 128 installed meters.
+2026-03-02,15,0EB04F2114F4,44.2124,High priority (Rank 15): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 259 installed meters.
+2026-03-09,1,02F5CE7705EC,67.9933,High priority (Rank 1): 67 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 387 installed meters.
+2026-03-09,2,0AFFC263C0D9,63.81,High priority (Rank 2): 47 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 99 installed meters. [Degraded coverage: 14/21 ref days].
+2026-03-09,3,0E03D8F69853,49.3794,High priority (Rank 3): 33 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 69 installed meters.
+2026-03-09,4,06FFEC2EFA5E,48.3219,High priority (Rank 4): 30 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 249 installed meters.
+2026-03-09,5,0EA0447DA91C,47.5611,High priority (Rank 5): 34 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 134 installed meters.
+2026-03-09,6,0A22622C2592,44.9086,High priority (Rank 6): 31 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 93 installed meters. [Degraded coverage: 13/21 ref days].
+2026-03-09,7,0A184A2E46B7,44.7668,High priority (Rank 7): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 80 installed meters.
+2026-03-09,8,0A10201AFE0A,44.7373,High priority (Rank 8): 3 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 53 installed meters.
+2026-03-09,9,02A3A213EEC1,44.3434,High priority (Rank 9): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 210 installed meters.
+2026-03-09,10,0A57A684E20B,44.0275,High priority (Rank 10): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 153 installed meters.
+2026-03-09,11,0A8EA87BB037,43.9596,High priority (Rank 11): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 320 installed meters.
+2026-03-09,12,06C67619095C,43.9323,High priority (Rank 12): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 393 installed meters.
+2026-03-09,13,0EF08481B333,43.917,High priority (Rank 13): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 247 installed meters.
+2026-03-09,14,0665C3FE6D67,43.916,High priority (Rank 14): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 169 installed meters.
+2026-03-09,15,0ED5057ECE3F,43.8875,High priority (Rank 15): 28 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 357 installed meters.
+2026-03-16,1,02F5CE7705EC,98.6667,High priority (Rank 1): 112 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 387 installed meters. [Degraded coverage: 21/21 ref days].
+2026-03-16,2,0E1D7CA1DB0C,85.7622,High priority (Rank 2): 99 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 525 installed meters.
+2026-03-16,3,06C77FEA9550,67.8052,High priority (Rank 3): 56 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 54 installed meters. [Degraded coverage: 13/21 ref days].
+2026-03-16,4,0253BB40EDA6,56.7007,High priority (Rank 4): 34 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 281 installed meters.
+2026-03-16,5,029A2B32D17E,55.6362,High priority (Rank 5): 51 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 194 installed meters.
+2026-03-16,6,0E2728C481CA,54.982,High priority (Rank 6): 39 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 103 installed meters.
+2026-03-16,7,0A184A2E46B7,49.5841,High priority (Rank 7): 37 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 80 installed meters.
+2026-03-16,8,0EA0447DA91C,49.5106,High priority (Rank 8): 41 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 134 installed meters.
+2026-03-16,9,024ED433BF7D,48.4513,High priority (Rank 9): 33 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 86 installed meters. [Degraded coverage: 14/21 ref days].
+2026-03-16,10,0230EEF72435,46.68,High priority (Rank 10): 38 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 351 installed meters.
+2026-03-16,11,0E752F1B295C,46.2978,High priority (Rank 11): 26 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 323 installed meters.
+2026-03-16,12,0AFE702BB093,45.1193,High priority (Rank 12): 33 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 222 installed meters. [Degraded coverage: 8/21 ref days].
+2026-03-16,13,0A62EECEEBD1,44.7026,High priority (Rank 13): 3 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 251 installed meters.
+2026-03-16,14,06AAA28A5D6B,44.4463,High priority (Rank 14): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 172 installed meters.
+2026-03-16,15,0AD2C92E9756,44.2281,High priority (Rank 15): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 198 installed meters.
+2026-03-23,1,02F5CE7705EC,97.8005,High priority (Rank 1): 100 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 387 installed meters. [Degraded coverage: 18/21 ref days].
+2026-03-23,2,0E5303C82FCB,62.8966,High priority (Rank 2): 44 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 238 installed meters. [Degraded coverage: 18/21 ref days].
+2026-03-23,3,0E1D7CA1DB0C,56.0287,High priority (Rank 3): 33 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 525 installed meters. [Degraded coverage: 21/21 ref days].
+2026-03-23,4,029A2B32D17E,53.6153,High priority (Rank 4): 41 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 194 installed meters.
+2026-03-23,5,06132D7396F8,48.8658,High priority (Rank 5): 32 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 96 installed meters.
+2026-03-23,6,06FFEC2EFA5E,47.6558,High priority (Rank 6): 30 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 249 installed meters.
+2026-03-23,7,0A663B6B4B28,46.2421,High priority (Rank 7): 35 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 136 installed meters.
+2026-03-23,8,0656377B3078,45.0561,High priority (Rank 8): 21 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 42 installed meters.
+2026-03-23,9,0283A18685C4,44.5946,High priority (Rank 9): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 176 installed meters.
+2026-03-23,10,027137436C87,44.5264,High priority (Rank 10): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 482 installed meters.
+2026-03-23,11,0279D2AC6ACE,44.3582,High priority (Rank 11): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 295 installed meters.
+2026-03-23,12,02388A18854F,44.3172,High priority (Rank 12): 27 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 93 installed meters.
+2026-03-23,13,0E9C29FF940E,44.3105,High priority (Rank 13): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 124 installed meters.
+2026-03-23,14,0644582257D9,44.2962,High priority (Rank 14): 1 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 140 installed meters.
+2026-03-23,15,0A42B2DB6370,44.2673,High priority (Rank 15): 2 abnormal offline duration hour(s) in last 7 days vs 21-day baseline. Serving 114 installed meters.
