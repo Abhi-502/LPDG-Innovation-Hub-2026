@@ -7,7 +7,7 @@
 [![Pytest](https://img.shields.io/badge/tests-48%20passed-brightgreen.svg)](https://docs.pytest.org/)
 [![Schema Validated](https://img.shields.io/badge/predictions.csv-100%25%20compliant-success.svg)](file:///Users/macbook/Desktop/CHALLENGE/validate_submission.py)
 [![Walkthrough Video](https://img.shields.io/badge/Walkthrough%20Video-8%20mins%20(1080p%2F720p)-orange.svg)](walkthrough_demo.mp4)
-[![Candidate Resume](https://img.shields.io/badge/Resume-Abhi__SDE.pdf-blueviolet.svg)](23091A0502.pdf)
+[![Candidate Resume](https://img.shields.io/badge/23091A0502.pdf-blueviolet.svg)](23091A0502.pdf)
 
 ---
 
