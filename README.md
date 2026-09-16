@@ -7,14 +7,14 @@
 [![Pytest](https://img.shields.io/badge/tests-48%20passed-brightgreen.svg)](https://docs.pytest.org/)
 [![Schema Validated](https://img.shields.io/badge/predictions.csv-100%25%20compliant-success.svg)](file:///Users/macbook/Desktop/CHALLENGE/validate_submission.py)
 [![Walkthrough Video](https://img.shields.io/badge/Walkthrough%20Video-8%20mins%20(1080p%2F720p)-orange.svg)](walkthrough_demo.mp4)
+[![Candidate Resume](https://img.shields.io/badge/Resume-Abhi__SDE.pdf-blueviolet.svg)](Abhi_SDE_Resume.pdf)
 
 ---
 
-## 📹 Video Walkthrough & Technical Demonstration
+## 📹 Video Walkthrough & Candidate Submission Materials
 
-An 8-minute end-to-end technical demonstration covering the problem formulation, mathematical scoring engine, pipeline execution, Docker deployment, and live API endpoints:
-
-- 🎬 **Direct Video File**: [**`walkthrough_demo.mp4`** (Click to view / download)](walkthrough_demo.mp4)
+- 🎬 **8-Minute Technical Walkthrough**: [**`walkthrough_demo.mp4`** (Click to view / download)](walkthrough_demo.mp4)
+- 📄 **Candidate Resume (SDE)**: [**`Abhi_SDE_Resume.pdf`**](Abhi_SDE_Resume.pdf)
 - 📝 **Full Presentation Script & Timing Guide**: [**`VIDEO_RECORDING_SCRIPT.md`**](VIDEO_RECORDING_SCRIPT.md)
 
 ---
@@ -222,6 +222,7 @@ For full request/response schemas and curl examples, see [docs/API.md](docs/API.
 
 ## 8. Detailed Documentation Index
 
+- **[Abhi_SDE_Resume.pdf](Abhi_SDE_Resume.pdf)**: Candidate Resume (Software Development Engineer).
 - **[PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**: Complete system design, operational ROI, and architectural blueprint.
 - **[PROCESS_AND_TERMINOLOGY_GUIDE.md](PROCESS_AND_TERMINOLOGY_GUIDE.md)**: Exhaustive domain glossary, formulas, and stage-by-stage execution map.
 - **[VIDEO_RECORDING_SCRIPT.md](VIDEO_RECORDING_SCRIPT.md)**: 6 to 8-minute presentation script, timing breakdown, and speaking guide.
