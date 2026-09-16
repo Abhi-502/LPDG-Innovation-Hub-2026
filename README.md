@@ -222,7 +222,7 @@ For full request/response schemas and curl examples, see [docs/API.md](docs/API.
 
 ## 8. Detailed Documentation Index
 
-- **[Abhi_SDE_Resume.pdf](Abhi_SDE_Resume.pdf)**: Candidate Resume (Software Development Engineer).
+- **[23091A0502.pdf](23091A0502.pdf)**: Candidate Resume (Software Development Engineer).
 - **[PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**: Complete system design, operational ROI, and architectural blueprint.
 - **[PROCESS_AND_TERMINOLOGY_GUIDE.md](PROCESS_AND_TERMINOLOGY_GUIDE.md)**: Exhaustive domain glossary, formulas, and stage-by-stage execution map.
 - **[VIDEO_RECORDING_SCRIPT.md](VIDEO_RECORDING_SCRIPT.md)**: 6 to 8-minute presentation script, timing breakdown, and speaking guide.
