@@ -6,14 +6,14 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com)
 [![Pytest](https://img.shields.io/badge/tests-48%20passed-brightgreen.svg)](https://docs.pytest.org/)
 [![Schema Validated](https://img.shields.io/badge/predictions.csv-100%25%20compliant-success.svg)](file:///Users/macbook/Desktop/CHALLENGE/validate_submission.py)
-[![Walkthrough Video](https://img.shields.io/badge/Demo%20Video-7%3A19%20mins%20(HD%20MOV)-orange.svg)](demo.mov)
+[![Walkthrough Video](https://img.shields.io/badge/Demo%20Video-6%3A27%20mins%20(HD%20MOV)-orange.svg)](demov.mov)
 [![Candidate Resume](https://img.shields.io/badge/23091A0502.pdf-blueviolet.svg)](23091A0502.pdf)
 
 ---
 
 ## 📹 Video Walkthrough & Candidate Submission Materials
 
-- 🎬 **Technical Walkthrough Demo**: [**`demo.mov`** (Click to view / download)](demo.mov)
+- 🎬 **Technical Walkthrough Demo**: [**`demov.mov`** (Click to view / download)](demov.mov)
 - 📄 **Candidate Resume (SDE)**: [**`23091A0502.pdf`**](23091A0502.pdf)
 - 📝 **Full Presentation Script & Timing Guide**: [**`VIDEO_RECORDING_SCRIPT.md`**](VIDEO_RECORDING_SCRIPT.md)
 
