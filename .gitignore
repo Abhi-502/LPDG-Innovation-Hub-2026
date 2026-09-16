@@ -1,0 +1,67 @@
+# ==========================================
+# Confidential Data Exclusion (Do NOT Commit)
+# ==========================================
+data/
+data/**
+telemetry/
+telemetry/**
+*.parquet
+gateway_master.csv
+meter_read_success.csv
+field_visits.csv
+engineer_review_2026-02.xlsx
+telemetry_sample_2025-08.csv
+*.zip
+
+# Allow submission output predictions
+!predictions.csv
+
+# ==========================================
+# Run Artifacts, Locks & Cache
+# ==========================================
+artifacts/
+artifacts/**
+*.lock
+.run.lock
+
+# ==========================================
+# Python Bytecode, Environments & Testing
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment configs & secrets
+.env
+.env.*
+!.env.example
+
+# IDEs and OS metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
