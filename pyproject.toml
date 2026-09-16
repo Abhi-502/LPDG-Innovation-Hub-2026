@@ -3,9 +3,9 @@ requires = ["setuptools>=65.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "gateway-prioritisation-part2"
+name = "gateway-prioritisation-engine"
 version = "0.2.0"
-description = "Deterministic Gateway Visit Prioritisation Production API (Part 2)"
+description = "Deterministic Gateway Visit Prioritisation Production API & Decision Engine"
 authors = [{ name = "Candidate" }]
 readme = "README.md"
 requires-python = ">=3.10"
@@ -30,3 +30,8 @@ dev = [
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 asyncio_mode = "auto"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::pytest.PytestCacheWarning",
+    "ignore::Warning",
+]
