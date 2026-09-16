@@ -2,25 +2,30 @@
 
 > **LPDG Innovation Hub Selection Challenge 2026 — Deterministic Prioritisation Engine & Production Software Development API**
 
----
-
-## 1. Executive Summary
-
-This repository presents the unified, production-grade **Gateway Visit Prioritisation System**, seamlessly combining the deterministic, point-in-time decision engine of **Part 1** with the modular clean architecture, REST API, OS-level concurrency control, and developer tooling of **Part 2 (Software Development)**.
-
-### Core System Highlights
-- **100% Submission Compliant (Part 1)**: Generates the official `predictions.csv` with exactly 15 unique gateways for each of the 8 evaluation weeks (120 rows total), full $\le 300$-character explanations, and 0 validation errors on `validate_submission.py`.
-- **Deterministic & Point-in-Time**: Evaluates each Monday cutoff using *only* data available strictly before Monday 00:00:00 UTC (`[start, cutoff)` half-open interval), eliminating lookahead leakage.
-- **Strict Window Isolation**: Decouples the 21-day historical reference baseline `[cutoff - 28d, cutoff - 7d)` from the 7-day detection window `[cutoff - 7d, cutoff)`. Prolonged failures cannot self-contaminate baseline statistics.
-- **Robust Multi-Signal Scoring**: Non-parametric robust statistics (Median / MAD with physical scale floors) combined with downstream meter-read failure degradation and sublinear fleet exposure scaling ($\ln(1 + \text{meters})$).
-- **Clean Layered Architecture (Part 2)**: Modular separation across API, Service, Strategy, Domain, and Repository layers.
-- **Pluggable Strategy Pattern**: Runtime algorithm switching via `RankingStrategy` protocol (`risk_v1`, `baseline`).
-- **OS-Level Concurrency Control**: Single-run serialized execution via atomic file locks (`fcntl.flock`) returning `409 Conflict` on overlapping runs with stale heartbeat crash recovery.
-- **Multiple Developer Interfaces**: CLI pipeline, FastAPI REST API with OpenAPI/Swagger (`/docs`), and Model Context Protocol (MCP) server.
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com)
+[![Pytest](https://img.shields.io/badge/tests-48%20passed-brightgreen.svg)](https://docs.pytest.org/)
+[![Schema Validated](https://img.shields.io/badge/predictions.csv-100%25%20compliant-success.svg)](file:///Users/macbook/Desktop/CHALLENGE/validate_submission.py)
 
 ---
 
-## 2. System Architecture
+## 1. Executive Summary & Challenge Context
+
+LPDG operates an IoT radio network of approximately 320 smart meter gateways installed across residential and commercial buildings. Each gateway relays hourly readings for 40 to 900 smart meters. Silent gateway failures result in unread meters, estimated bills, manual read dispatches, and regulatory non-compliance.
+
+### Operational Constraints & Economics
+- **Weekly Dispatch Limit**: Exactly **15 technician visits per week**.
+- **Wasted Visit Cost**: **€380** if a technician is sent to a healthy gateway.
+- **Unaddressed Outage Cost**: **€600/week** compounding for every week a broken gateway remains unaddressed.
+- **Decision Schedule**: Evaluated strictly every Monday at 00:00:00 UTC for the subsequent week.
+
+This repository provides a fully unified solution:
+- **Part 1 (Deterministic Core Engine)**: Point-in-time multi-signal scoring, robust statistics (Median/MAD with scale floors), strict window isolation, and deterministic tie-breaking.
+- **Part 2 (Software Development Production Architecture)**: Layered clean architecture, modular **FastAPI** REST API, OpenAPI/Swagger documentation, pluggable `RankingStrategy` registry, OS-level concurrency locking (`fcntl.flock`), and an Stdio Model Context Protocol (MCP) server.
+
+---
+
+## 2. System Architecture & Layering
 
 ```
                                   ┌───────────────────────────┐
@@ -36,7 +41,7 @@ This repository presents the unified, production-grade **Gateway Visit Prioritis
                                                 │
                                                 ▼
                                   ┌───────────────────────────┐
-                                  │  FeatureBuilder (Median)  │
+                                  │  Feature & Quality Gate   │
                                   │  21d Ref vs 7d Det (MAD)  │
                                   └─────────────┬─────────────┘
                                                 │
@@ -44,8 +49,8 @@ This repository presents the unified, production-grade **Gateway Visit Prioritis
                         ▼                                               ▼
          ┌─────────────────────────────┐                 ┌─────────────────────────────┐
          │  RankingStrategy Protocol   │                 │     OS Run Lock (fcntl)     │
-         │ - RiskRanker (risk_v1)      │                 │  Run State Machine +        │
-         │ - Baseline3SigmaRanker      │                 │  Artifact Isolation Writer  │
+         │ • RiskRanker (risk_v1)      │                 │  • Atomic run serialization │
+         │ • Baseline3SigmaRanker      │                 │  • Run artifact isolation   │
          └──────────────┬──────────────┘                 └──────────────┬──────────────┘
                         │                                               │
                         └───────────────────────┬───────────────────────┘
@@ -59,13 +64,13 @@ This repository presents the unified, production-grade **Gateway Visit Prioritis
                    ▼                            ▼                            ▼
          ┌───────────────────┐        ┌───────────────────┐        ┌───────────────────┐
          │   Part 1 CLI      │        │   FastAPI REST    │        │    MCP Server     │
-         │ (predictions.csv) │        │ (/health, /weeks) │        │   (JSON-RPC / AI) │
+         │ (predictions.csv) │        │ (/health, /weeks) │        │  (Stdio JSON-RPC) │
          └───────────────────┘        └───────────────────┘        └───────────────────┘
 ```
 
 ---
 
-## 3. Quick Start
+## 3. Quick Start & Execution Guide
 
 ### 3.1 Setup Environment
 ```bash
@@ -73,56 +78,66 @@ This repository presents the unified, production-grade **Gateway Visit Prioritis
 python3 -m venv .venv
 source .venv/bin/activate
 
-# 2. Install dependencies
+# 2. Install pinned dependencies
 pip install -r requirements.txt
 ```
 
 ### 3.2 Part 1: Execute CLI Pipeline (One Command)
-Produces the official `predictions.csv`:
+Produces the official submission file `predictions.csv`:
 ```bash
-# Standard run (reads ./data and generates ./predictions.csv)
+# Standard execution (reads ./data and generates ./predictions.csv)
 make run
 # or:
-python main.py --data data --out predictions.csv
+python3 main.py --data data --out predictions.csv
+
+# Running on custom / unseen evaluation data with specific weeks:
+python3 main.py --data "/path/to/custom/data" --weeks 2026-04-06,2026-04-13 --out predictions.csv
 ```
 
-### 3.3 Validate Submission
-Runs the official Innovation Hub validator:
+### 3.3 Validate Submission File
+Executes the official challenge schema validator:
 ```bash
 make validate
 # or:
-python validate_submission.py predictions.csv
+python3 validate_submission.py predictions.csv
+```
+**Output**:
+```
+predictions.csv: OK
+  15 ranked gateways for each of 8 weeks, 2026-02-02 to 2026-03-23
 ```
 
-### 3.4 Part 2: Start FastAPI REST API Server
+### 3.4 Part 2: Start FastAPI Web Service
 ```bash
 make api
 # or:
-python main.py --serve --host 0.0.0.0 --port 8000
+python3 main.py --serve --host 0.0.0.0 --port 8000
 ```
-- **Interactive Swagger UI**: `http://localhost:8000/docs`
-- **ReDoc Documentation**: `http://localhost:8000/redoc`
-- **OpenAPI Schema**: `http://localhost:8000/openapi.json`
+- **Interactive Swagger UI**: [`http://localhost:8000/docs`](http://localhost:8000/docs)
+- **ReDoc Documentation**: [`http://localhost:8000/redoc`](http://localhost:8000/redoc)
+- **OpenAPI Schema**: [`http://localhost:8000/openapi.json`](http://localhost:8000/openapi.json)
 
-### 3.5 Run Model Context Protocol (MCP) Server
+### 3.5 Run Model Context Protocol (MCP) Stdio Server
 ```bash
-python mcp_server.py
+python3 mcp_server.py
 ```
 
-### 3.6 Run Automated Tests
+### 3.6 Execute Automated Test Suite (48 Tests)
 ```bash
 make test
 # or:
 pytest -v
 ```
 
-### 3.7 Run with Docker & Docker Compose
+### 3.7 Run in Isolated Docker Container
 ```bash
-# Docker build & run
+# Build Docker image
 make docker-build
+
+# Run API container with data mounted read-only
 make docker-run
 
-# Or via Docker Compose
+# Or run via Docker Compose
 docker compose up --build
 ```
 
@@ -135,111 +150,71 @@ All score components are normalized to an explicit **0 to 100** composite scale:
 $$\text{Final Score} = 0.70 \times \text{Telemetry Risk} + 0.25 \times \text{Meter Impact} + 0.05 \times \text{Data Confidence}$$
 
 1. **Telemetry Risk ($0 - 100$)**:
-   $$\text{Telemetry Risk} = (0.45 \times \text{Persistence} + 0.35 \times \text{Severity} + 0.20 \times \text{Recency}) \times \text{Importance Multiplier}$$
-   - *Persistence*: Fraction of anomalous hours ($z > 3.0$) in the 7-day detection window.
-   - *Severity*: Mean robust z-score $\left(\frac{x - \text{Median}}{\text{MAD} \times 1.4826}\right)$ capped at $10.0\sigma$.
-   - *Recency*: Exponential time-decay weighting favoring failures occurring in the final 48 hours.
-   - *Scale Floors*: Physical minimum scale floors (e.g. 60.0s for offline duration, 1.0 for counts) prevent zero-MAD false alarms.
+   $$\text{Telemetry Risk} = (0.45 \times P + 0.35 \times S + 0.20 \times R) \times M_{\text{imp}}$$
+   - **Persistence ($P$)**: Fraction of detection hours ($z > 3.0$) flagged as anomalous ($0 - 100$).
+   - **Severity ($S$)**: Mean robust z-score $\left(\frac{x - \text{Median}}{\text{MAD} \times 1.4826}\right)$ normalized to $[0, 100]$ (capped at $10.0\sigma$).
+   - **Recency ($R$)**: Exponential time-decay weight favoring failures in the final 48 hours.
+   - **Scale Floors**: Physical minimum scale floors ($60.0\,\text{s}$ for offline duration, $1.0$ for event counts) prevent zero-MAD false alarms.
 
-2. **Meter Impact ($0 - 100$)**:
+2. **Downstream Meter Impact ($0 - 100$)**:
    $$\text{Meter Impact} = \left(0.60 \times (1 - \text{Read Success}) + 0.40 \times \text{Degradation}\right) \times \min\left(1.0, \frac{\ln(1 + \text{Meters})}{\ln(1 + 500)}\right) \times 100$$
-   - Sublinear logarithmic scaling accounts for customer impact without allowing mega-sites to permanently starve smaller sites.
+   - Sublinear logarithmic exposure scaling ensures customer impact is prioritized without mega-sites monopolizing the queue.
 
 3. **Data Confidence ($0 - 100$)**:
-   - $100$ for full 21-day reference and 7-day detection coverage; proportionally discounted when coverage is degraded.
+   - Scores $100$ for full 21-day reference and 7-day detection coverage; proportionally discounted when coverage is degraded. Dynamically rebalances weights if meter data is missing.
 
 4. **Deterministic 4-Key Tie Breaking**:
-   `(-final_score, -exposure_meters, -total_recent_offline_sec, gateway_id)` ensures 100% reproducible ordering regardless of environment or row order.
+   $$\text{Sort Key} = \left(-\text{final\_score}, -\text{exposure\_meters}, -\text{total\_recent\_offline\_sec}, \text{gateway\_id}\right)$$
+   Guarantees 100% byte-for-byte reproducible rank order regardless of row order or operating system.
 
 ---
 
-## 5. API Endpoints Overview
+## 5. REST API Endpoints Overview
 
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/health` | System health check and dataset readiness verification |
-| `GET` | `/api/v1/weeks/{week_start}/predictions` | Retrieve top 15 ranked gateways for a given Monday cutoff |
-| `GET` | `/api/v1/gateways/{gateway_id}/explanation` | Detailed diagnostic explanation for ranked, unranked, or ineligible gateways |
-| `POST`| `/api/v1/runs` | Trigger a new prioritisation execution run with concurrency locking |
-| `GET` | `/api/v1/runs/{run_id}` | Retrieve execution run status, metadata, and artifact paths |
+| Method | Endpoint | Description | Status Code |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/health` | System health check and data directory readiness | `200 OK` |
+| `GET` | `/api/v1/weeks/{week_start}/predictions` | Retrieve top 15 ranked gateways for a given Monday cutoff | `200 OK` |
+| `GET` | `/api/v1/predictions` | Retrieve top 15 ranked gateways for latest scored week | `200 OK` |
+| `GET` | `/api/v1/weeks/{week_start}/gateways/{gateway_id}` | Diagnostic evaluation for ranked, unranked, or ineligible gateways | `200 OK` |
+| `GET` | `/api/v1/gateways/{gateway_id}` | Direct diagnostic evaluation for a gateway (latest or specified week) | `200 OK` |
+| `POST`| `/api/v1/runs` | Trigger a new prioritisation run with concurrency locking (`409 Conflict`) | `201 Created` |
+| `GET` | `/api/v1/runs/{run_id}` | Retrieve execution run status, timestamps, and isolated artifact paths | `200 OK` |
 
-For complete request/response schemas and curl examples, see [docs/API.md](file:///Users/macbook/Desktop/CHALLENGE/docs/API.md).
+For full request/response schemas and curl examples, see [docs/API.md](docs/API.md).
 
 ---
 
-## 6. Configuration & Environment Variables
+## 6. Concurrency Control & Run Artifact Isolation
+
+1. **Kernel Mutex Lock**: `RunService` acquires an exclusive, non-blocking lock on `artifacts/.run.lock` using `fcntl.flock`. Overlapping concurrent runs receive an immediate **`409 Conflict`**.
+2. **Artifact Isolation**: REST API runs write exclusively to `artifacts/runs/<run_id>/predictions.csv` and `metadata.json`, leaving root `./predictions.csv` unmutated for CLI submissions.
+3. **Heartbeat & Crash Recovery**: Periodic heartbeat updates ensure that unexpected process crashes (`SIGKILL`) are detected after 300s and transitioned to `ORPHANED`.
+
+---
+
+## 7. Configuration Reference
 
 | Variable | Default | Description |
 | :--- | :--- | :--- |
-| `APP_ENV` | `development` | Deployment environment (`development`, `production`, `test`) |
+| `APP_ENV` | `development` | Environment mode (`development`, `production`, `test`) |
 | `API_HOST` | `0.0.0.0` | Host IP for FastAPI server |
 | `API_PORT` | `8000` | HTTP port for FastAPI server |
-| `DATA_DIR` | `./data` | Path to directory containing raw data files |
-| `ARTIFACTS_DIR` | `./artifacts` | Directory for run execution artifacts and locks |
+| `DATA_DIR` | `./data` | Path to directory containing raw dataset files |
+| `ARTIFACTS_DIR` | `./artifacts` | Root directory for isolated run outputs and locks |
 | `RANKING_METHOD` | `risk_v1` | Default ranking strategy (`risk_v1` or `baseline`) |
 | `VISIT_LIMIT` | `15` | Target number of gateway visits per week |
 | `RUN_LOCK_PATH` | `./artifacts/.run.lock` | OS file lock path for run serialization |
-| `RUN_TIMEOUT_SECONDS` | `300` | Timeout before stale runs are marked `ORPHANED` |
+| `RUN_TIMEOUT_SECONDS`| `300` | Timeout before stale runs are marked `ORPHANED` |
 | `LOG_LEVEL` | `INFO` | Logging level (`DEBUG`, `INFO`, `WARNING`, `ERROR`) |
 
 ---
 
-## 7. Repository Layout
+## 8. Detailed Documentation Index
 
-```
-.
-├── Makefile                          # Unified build, test, run, and docker targets
-├── requirements.txt                  # Pinned dependencies
-├── pyproject.toml                    # Python project & test configuration
-├── Dockerfile                        # Multi-stage production container image
-├── compose.yaml                      # Docker Compose service definition
-├── validate_submission.py            # Official challenge validator
-├── predictions.csv                   # Validated 120-row submission output
-├── DECISIONS.md                      # Defended architectural decisions & roadmap
-├── AI-USAGE.md                       # AI usage disclosure & error correction log
-├── README.md                         # Comprehensive documentation
-├── main.py                           # Unified CLI and API entry point
-├── mcp_server.py                     # Model Context Protocol (MCP) stdio server
-├── docs/                             # Detailed documentation
-│   └── API.md                        # Complete REST API reference
-├── app/                              # Core application package
-│   ├── config.py                     # Central configuration & environment loading
-│   ├── domain/                       # Core domain entities, models & exceptions
-│   │   ├── models.py
-│   │   ├── protocols.py
-│   │   └── errors.py
-│   ├── repositories/                 # Data access layer (Parquet & CSV)
-│   │   ├── gateways.py
-│   │   ├── telemetry.py
-│   │   └── meter_reads.py
-│   ├── features/                     # Point-in-time robust feature extraction
-│   │   └── builder.py
-│   ├── ranking/                      # Pluggable ranking strategies
-│   │   ├── base.py
-│   │   ├── risk_v1.py
-│   │   └── baseline.py
-│   ├── services/                     # Business logic and coordination
-│   │   ├── ranking_service.py
-│   │   ├── gateway_service.py
-│   │   └── run_service.py
-│   ├── explanations/                 # Operational explanation builder
-│   │   └── builder.py
-│   ├── validation/                   # Input & data quality validation
-│   │   └── input.py
-│   ├── output/                       # Atomic CSV and artifact writer
-│   │   └── writer.py
-│   └── api/                          # FastAPI web layer
-│       ├── app.py
-│       └── routes/
-│           ├── health.py
-│           ├── rankings.py
-│           ├── gateways.py
-│           └── runs.py
-└── tests/                            # Comprehensive automated test suite
-    ├── conftest.py
-    ├── fixtures/
-    ├── unit/
-    ├── integration/
-    ├── regression/
-    └── e2e/
-```
+- **[PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**: Complete system design, operational ROI, and architectural blueprint.
+- **[PROCESS_AND_TERMINOLOGY_GUIDE.md](PROCESS_AND_TERMINOLOGY_GUIDE.md)**: Exhaustive domain glossary, formulas, and stage-by-stage execution map.
+- **[VIDEO_RECORDING_SCRIPT.md](VIDEO_RECORDING_SCRIPT.md)**: 6 to 8-minute presentation script, timing breakdown, and speaking guide.
+- **[DECISIONS.md](DECISIONS.md)**: 5 defended architectural choices, Part 2 track defense, and two-week roadmap.
+- **[AI-USAGE.md](AI-USAGE.md)**: AI usage disclosure & log of 5 concrete corrected errors.
+- **[docs/API.md](docs/API.md)**: Full REST API specification with cURL examples.
