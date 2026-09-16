@@ -62,6 +62,16 @@ def create_app(config: Optional[AppConfig] = None) -> FastAPI:
     app.include_router(gateways.router)
     app.include_router(runs.router)
 
+    @app.get("/", include_in_schema=False)
+    def root():
+        return {
+            "title": "Gateway Visit Prioritisation Engine API",
+            "version": __version__,
+            "docs": "/docs",
+            "health": "/health",
+            "predictions": "/api/v1/predictions",
+        }
+
     return app
 
 
