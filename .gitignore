@@ -1,6 +1,7 @@
 # ==========================================
 # Confidential Data Exclusion (Do NOT Commit)
 # ==========================================
+data
 data/
 data/**
 telemetry/
