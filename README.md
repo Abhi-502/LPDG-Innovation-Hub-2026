@@ -14,7 +14,7 @@
 ## 📹 Video Walkthrough & Candidate Submission Materials
 
 - 🎬 **8-Minute Technical Walkthrough**: [**`walkthrough_demo.mp4`** (Click to view / download)](walkthrough_demo.mp4)
-- 📄 **Candidate Resume (SDE)**: [**`Abhi_SDE_Resume.pdf`**](23091A0502.pdf)
+- 📄 **Candidate Resume (SDE)**: [**`23091A0502.pdf`**](23091A0502.pdf)
 - 📝 **Full Presentation Script & Timing Guide**: [**`VIDEO_RECORDING_SCRIPT.md`**](VIDEO_RECORDING_SCRIPT.md)
 
 ---
